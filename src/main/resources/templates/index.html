@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <title>Trabajo Email SD</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+        <!-- Navigation Bar -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dbe0e6] dark:border-white/10 bg-white dark:bg-background-dark px-10 py-3">
+            <div class="flex items-center gap-4 text-[#111418] dark:text-white">
+                <div class="size-6 text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-3xl">mail</span>
+                </div>
+                <h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Trabajo 1 - Sesion 1 Sistemas Distribuido </h2>
+            </div>
+        </header>
+        <main class="flex flex-1 justify-center py-12 px-4">
+            <form action="/send" method="post">
+                <div class="space-y-6">
+                    <!-- Recipient Field -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[#111418] dark:text-white text-sm font-bold leading-normal">Email Destino</label>
+                        <div class="relative">
+                            <input name="to" class="form-input flex w-full rounded-lg text-[#111418] dark:text-white focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-white/10 bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] px-4 text-base font-normal outline-none transition-all" placeholder="name@ejemplo.com" type="email"/>
+                        </div>
+                    </div>
+                    <!-- Subject Field -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[#111418] dark:text-white text-sm font-bold leading-normal">Asunto</label>
+                        <input name="subject" class="form-input flex w-full rounded-lg text-[#111418] dark:text-white focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-white/10 bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] px-4 text-base font-normal outline-none transition-all" placeholder="Sobre que?" type="text"/>
+                    </div>
+                    <!-- Message Body Field -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[#111418] dark:text-white text-sm font-bold leading-normal">Mensaje</label>
+                        <textarea name="body" class="form-input flex w-full min-h-[300px] rounded-lg text-[#111418] dark:text-white focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-white/10 bg-white dark:bg-[#101922] placeholder:text-[#617589] p-4 text-base font-normal leading-relaxed outline-none transition-all resize-none" placeholder="Escribe tu mensaje aqui..."></textarea>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="flex items-center justify-between mt-10 pt-6 border-t border-[#f0f2f4] dark:border-white/5">
+                    <div class="flex gap-2">
+                        <!-- botones de formato -->
+                    </div>
+                    <div class="flex gap-4">
+                        <button type="button" class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent text-[#617589] dark:text-white/60 text-sm font-bold hover:bg-background-light dark:hover:bg-white/5 transition-all">
+                            <span>Cancelar</span>
+                        </button>
+                        <button type="submit" class="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-8 bg-primary text-white text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-xl">send</span>
+                            <span>Enviar</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <!-- Footer Footer -->
+        <footer class="flex flex-col gap-4 px-10 py-10 border-t border-[#dbe0e6] dark:border-white/10 mt-10">
+            <div class="flex justify-between items-center">
+                <p class="text-[#617589] dark:text-white/40 text-sm">© 2026 Jose Navarro & Esteban Alba. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+</div>
+</body></html>
